@@ -1,5 +1,7 @@
 package com.ocsoftware
 
+import com.ocsoftware.model.Article
+import com.ocsoftware.model.Email
 import com.ocsoftware.model.UnusedClass
 import com.ocsoftware.model.User
 import io.kotlintest.matchers.shouldEqual
@@ -45,5 +47,13 @@ class FabrikatorTest : StringSpec() {
 class Factory : Fabrikator() {
   fun userFactory(): User {
     return User(3, "John Doe", false)
+  }
+
+  fun emailFactory(): Email {
+    return Email("someEmail@foo.com")
+  }
+
+  fun articleFactory(): Article {
+    return Article("Post Title")
   }
 }
