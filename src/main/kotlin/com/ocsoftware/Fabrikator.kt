@@ -18,6 +18,10 @@ open class Fabrikator {
       """.trimIndent())
     }
 
+    if(attrs.isNotEmpty()) {
+      // todo merge attrs
+    }
+
     return filteredFunctions[0].call(this)
   }
 }

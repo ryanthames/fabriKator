@@ -23,8 +23,8 @@ class FabrikatorTest : StringSpec() {
     }
 
     "build merges passed in options" {
-      // TODO implement and enable
-    }.config(enabled = false)
+      User(3, "John Doe", true) shouldEqual factory.build(User::class, listOf(Pair("admin", true)))
+    }
 
     "build raises an exception if invalid keys are passed in via options" {
       // TODO implement and enable
