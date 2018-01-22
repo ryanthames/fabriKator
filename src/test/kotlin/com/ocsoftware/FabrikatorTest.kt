@@ -2,6 +2,7 @@ package com.ocsoftware
 
 import com.ocsoftware.model.UnusedClass
 import com.ocsoftware.model.User
+import io.kotlintest.matchers.shouldEqual
 import io.kotlintest.matchers.shouldThrow
 import io.kotlintest.specs.StringSpec
 
@@ -16,8 +17,8 @@ class FabrikatorTest : StringSpec() {
     }
 
     "build returns the matching factory" {
-      // TODO implement and enable
-    }.config(enabled = false)
+      User(3, "John Doe", false) shouldEqual factory.build(User::class)
+    }
 
     "build merges passed in options" {
       // TODO implement and enable
